@@ -1,39 +1,32 @@
-# deepl-translate README
+# tencentCloud-translate README
 
-The plugin provides a translation source for the ‘comment-translate’ plugin. Itself does not activate, it starts when enabled is selected.
+该插件利用腾讯云机器翻译 API 为“comment-translate”插件提供翻译源。本身不激活，它在选择启用时启动。
 
 ## Features
 
-1. Provide translation capabilities
-2. Provides online document link text
+1. 提供翻译能力
 
 ## Requirements
 
-Please install '[comment-translate](https://github.com/intellism/vscode-comment-translate)' to use
+请安装 '[comment-translate](https://github.com/intellism/vscode-comment-translate)' 使用
 
 ## Use
-1. After installation, call the "Change translation source" command of "Comment Translate"
-    ![change](./image/change.png)
-2. Check "Deepl translate" to configure the plugin API Key
-    ![select](./image/select.png)
-3. Directly use the "Comment Translate" interactive mode to translate the corresponding text
+
+1. 安装完成后，调用 "Change translation source" 接着 "Comment Translate"
+   ![change](./image/change.png)
+   ![select](./image/select.png)
+
+2. 配置 tencent-cloud-translate 插件
+3. 直接使用"Comment Translate" 交互模式翻译对应文字
 
 ## Extension Settings
 
-This extension contributes the following settings:
+此扩展提供以下设置：
 
-* `deeplTranslate.apiFree`: Whether it is a free API
-* `deeplTranslate.authKey`: set to `authKey` to request
-* `deeplTranslate.preserveFormatting`: Sets whether the translation engine should respect the original formatting, even if it would usually correct some aspects. [More](https://www.deepl.com/zh/docs-api/translating-text/request/
-* `deeplTranslate.formality`: Sets whether the translated text should lean towards formal or informal language. [More](https://www.deepl.com/zh/docs-api/translating-text/request/)
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
+- `tencentCloudTranslate.secretId`: 在 [云 API 密钥](https://console.cloud.tencent.com/cam/capi) 上申请的标识身份的 SecretId。
+- `tencentCloudTranslate.secretKey`:在 [云 API 密钥](https://console.cloud.tencent.com/cam/capi) 上申请的标识身份的 SecretKey。
+- `tencentCloudTranslate.region`: 公共参数，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/551/15619)。不填默认为 ap-guangzhou
+- `tencentCloudTranslate.projectId`: 项目 ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目 ID:0
 
 ### 0.0.1
 

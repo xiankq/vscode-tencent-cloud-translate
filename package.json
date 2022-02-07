@@ -2,10 +2,10 @@
   "name": "tencent-cloud-translate",
   "displayName": "tencent-cloud-translate",
   "description": "tencent cloud translate source for comment-translate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "Kaiqun",
   "engines": {
-    "vscode": "^1.63.0"
+    "vscode": "^1.64.0"
   },
   "categories": [
     "Other"
@@ -18,13 +18,13 @@
     "注释",
     "翻訳"
   ],
-  "homepage": "https://github.com/intellism/deepl-translate#readme",
+  "homepage": "https://github.com/xiankaiqun/vscode-tencent-cloud-translate#readme",
   "bugs": {
-    "url": "https://github.com/intellism/deepl-translate/issues"
+    "url": "https://github.com/xiankaiqun/vscode-tencent-cloud-translate/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kaiqun/vscode-tencent-cloud-translate.git"
+    "url": "https://github.com/xiankaiqun/vscode-tencent-cloud-translate.git"
   },
   "activationEvents": [],
   "main": "./out/extension.js",
@@ -67,6 +67,8 @@
     ]
   },
   "scripts": {
+    "publish": "vsce publish",
+    "build": "vsce package",
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
@@ -85,7 +87,8 @@
     "eslint": "^8.8.0",
     "glob": "^7.2.0",
     "mocha": "^9.2.0",
-    "typescript": "^4.5.5"
+    "typescript": "^4.5.5",
+    "vsce": "^2.6.7"
   },
   "dependencies": {
     "comment-translate-manager": "^0.0.2",

@@ -62,7 +62,7 @@ export class TmtTranslate implements ITranslate {
 
     async translate(sourceText: string, { to = 'auto' }: ITranslateOptions) {
         const { secretId, secretKey, region, projectId } = this._defaultOption ?? {};
-        if (!secretId || !secretKey || !region) {
+        if (!secretId || !secretKey) {
             throw new Error('Please check the configuration of secretId and secretKey!');
         }
         const TmtClient = tencentcloud.tmt.v20180321.Client;
@@ -78,12 +78,12 @@ export class TmtTranslate implements ITranslate {
                     endpoint: "tmt.tencentcloudapi.com",
                 },
             },
-            region,
+            region: region || 'ap-guangzhou',
         };
 
         const client = new TmtClient(clientConfig);
         const params = {
-            ProjectId: projectId,
+            ProjectId: projectId || 0,
             Source: 'auto',
             SourceText: sourceText,
             Target: convertLang(to),
