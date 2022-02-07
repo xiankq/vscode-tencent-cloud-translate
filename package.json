@@ -1,0 +1,94 @@
+{
+  "name": "tencent-cloud-translate",
+  "displayName": "tencent-cloud-translate",
+  "description": "tencent cloud translate source for comment-translate",
+  "version": "0.0.1",
+  "publisher": "Kaiqun",
+  "engines": {
+    "vscode": "^1.63.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "translateSource",
+    "comment translate",
+    "tencent cloud translate",
+    "翻译",
+    "注释",
+    "翻訳"
+  ],
+  "homepage": "https://github.com/intellism/deepl-translate#readme",
+  "bugs": {
+    "url": "https://github.com/intellism/deepl-translate/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaiqun/vscode-tencent-cloud-translate.git"
+  },
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "icon": "image/logo.png",
+  "extensionDependencies": [
+    "intellsmi.comment-translate"
+  ],
+  "contributes": {
+    "configuration": [
+      {
+        "title": "TencentCloud translate Configuration",
+        "type": "Object",
+        "properties": {
+          "tencentCloudTranslate.secretId": {
+            "type": "string",
+            "markdownDescription": "在 [云API密钥](https://console.cloud.tencent.com/cam/capi) 上申请的标识身份的 SecretId。"
+          },
+          "tencentCloudTranslate.secretKey": {
+            "type": "string",
+            "markdownDescription": "在 [云API密钥](https://console.cloud.tencent.com/cam/capi) 上申请的标识身份的 SecretKey。"
+          },
+          "tencentCloudTranslate.region": {
+            "type": "string",
+            "default": "ap-guangzhou",
+            "markdownDescription": "公共参数，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/551/15619)。不填默认为 ap-guangzhou"
+          },
+          "tencentCloudTranslate.projectId": {
+            "type": "number",
+            "default": 0,
+            "markdownDescription": "项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0"
+          }
+        }
+      }
+    ],
+    "translates": [
+      {
+        "translate": "tencentCloud",
+        "title": "TencentCloud translate"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "17.x",
+    "@types/vscode": "^1.64.0",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
+    "@vscode/test-electron": "^2.1.2",
+    "eslint": "^8.8.0",
+    "glob": "^7.2.0",
+    "mocha": "^9.2.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "comment-translate-manager": "^0.0.2",
+    "tencentcloud-sdk-nodejs": "^4.0.284"
+  }
+}
