@@ -2,7 +2,7 @@
   "name": "tencent-cloud-translate",
   "displayName": "tencent-cloud-translate",
   "description": "tencent cloud translate source for comment-translate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "Kaiqun",
   "engines": {
     "vscode": "^1.64.0"

@@ -1,6 +1,6 @@
 # tencentCloud-translate README
 
-该插件利用腾讯云机器翻译 API 为“comment-translate”插件提供翻译源。本身不激活，它在选择启用时启动。
+该插件利用腾讯云机器翻译 API 为 [comment-translate](https://marketplace.visualstudio.com/items?itemName=intellsmi.comment-translate) 插件提供翻译源。本身不激活，它在选择启用时启动。
 
 ## Features
 
@@ -8,7 +8,7 @@
 
 ## Requirements
 
-请安装 '[comment-translate](https://github.com/intellism/vscode-comment-translate)' 使用
+请安装 [comment-translate](https://marketplace.visualstudio.com/items?itemName=intellsmi.comment-translate) 使用
 
 ## Use
 
@@ -18,6 +18,8 @@
 
 2. 配置 tencent-cloud-translate 插件
 3. 直接使用"Comment Translate" 交互模式翻译对应文字
+
+4. [腾讯云机器翻译](https://console.cloud.tencent.com/tmt)开通参考
 
 ## Extension Settings
 

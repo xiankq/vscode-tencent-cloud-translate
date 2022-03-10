@@ -95,7 +95,7 @@ export class TmtTranslate implements ITranslate {
 
     link(content: string, { to = 'auto' }: ITranslateOptions) {
         let str = `https://translate.google.cn/?sl=auto&tl=${to}&text=${encodeURIComponent(content)}&op=translate`;
-        return `[Google](${str})`;
+        return `[tmt](${str})`;
     }
 
     isSupported(src: string) {
